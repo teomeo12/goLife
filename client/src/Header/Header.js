@@ -68,28 +68,7 @@ export default class Header extends Component {
             <BiSearchAlt />
           </div>
         </div>
-        <div className="header__nav">
-          <Link to="/login" className="header__link">
-            <div className="header__option">
-              <span className="header__optionLineOne">
-                {/* Hello {user ? user : "Stranger"} */}
-              </span>
-              <span className="header__optionLineTwo">
-                {/* Sign {user ? "Out" : "In"} */}
-              </span>
-            </div>
-          </Link>
-          <Link className="header__link" to="/">
-            <div className="header__option">
-              <span className="header__optionLineOne"></span>
-            </div>
-          </Link>
-          <Link className="header__link" to="/">
-            <div className="header__option">
-              <span className="header__optionLineOne"></span>
-            </div>
-          </Link>
-        </div>
+        
       </nav>
     );
   }
@@ -132,3 +111,27 @@ export default class Header extends Component {
 // }
 
 //to={"/Register"}
+
+
+<div className="header__nav">
+  <Link to="/login" className="header__link">
+    <div className="header__option">
+      <span className="header__optionLineOne">
+        {/* Hello {user ? user : "Stranger"} */}
+      </span>
+      <span className="header__optionLineTwo">
+        {/* Sign {user ? "Out" : "In"} */}
+      </span>
+    </div>
+  </Link>
+  <Link className="header__link" to="/">
+    <div className="header__option">
+      <span className="header__optionLineOne">Login</span>
+    </div>
+  </Link>
+  <Link className="header__link" to="/">
+    <div className="header__option">
+      <span className="header__optionLineOne">SingUp</span>
+    </div>
+  </Link>
+</div>;
