@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Articles.css";
+import Edit from "../edit/Edit";
 
 export default function Articles() {
   const [data, setData] = useState([]);
@@ -69,6 +70,9 @@ export default function Articles() {
           </article>
         ))}
       </div>
+      <button>
+        <Edit />
+      </button>
     </>
   );
 }

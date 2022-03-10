@@ -13,4 +13,13 @@ routes
 
   .get("/articles", (req, res) => {
     db.all("select * from article", (err, rows) => res.json(rows));
+  })
+
+  .post("/upload", (req, res) => {
+    console.log("server", req.body);
+    console.log("image", req.files.Image);
+    req.files.Image.mv(__dirname + "/media/" + req.files.Image.name, (err) => {
+      if (err) return res.status(500).send(err);
+      res.json({ file: req.files.Image.name });
+    });
   });
