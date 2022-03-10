@@ -1,5 +1,5 @@
 import './Home.css';
-import Articles from '../articles/Articles';
+import Articles from '../Articles/Articles';
 export default function Home() {
     return (
       <>
