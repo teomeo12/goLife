@@ -1,3 +1,39 @@
-.login{
-    border:2px solid red;
+header {
+    background-color: #0ba08b;
+    height: 20vh;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #0ba08b;
+    margin-left: 5%;
+}
+form {
+    background-color: aqua;
+}
+.container__form {
+    text-align: center;
+}
+form div input {
+    border: none;
+    border-bottom: solid #ffd365;
+}
+#Forgot{
+    text-decoration: none;
+    color: grey;
+}
+#Forgot::hover {
+  color: #ffd365;
+}
+button[type="submit"] {
+    background-color: #0ba08b;
+    border: none;
+    padding: 0px 50px;
+    border-radius: 30px;
+    color: white;
+}
+#Sign_up{
+    color: #0ba08b;
 }
