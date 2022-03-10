@@ -1,6 +1,32 @@
+html{
+    font-family: "Rockwell", "Courier Bold";
+}
 header {
     background-color: #0ba08b;
-    height: 20vh;
+    height: 40vh;
+    position: relative;
+}
+.logo_img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-content: center;
+}
+header img {
+    width: 80%;
+    margin: auto;
+}
+h1{
+    position: absolute;
+    display: flex;
+    bottom: 18%;
+    left: 11.5%;
+    color: white;
+    font-style: italic;
+    font-weight: 400;
 }
 .triangle {
     width: 0;
@@ -10,30 +36,40 @@ header {
     border-top: 30px solid #0ba08b;
     margin-left: 5%;
 }
-form {
-    background-color: aqua;
-}
 .container__form {
     text-align: center;
 }
 form div input {
     border: none;
     border-bottom: solid #ffd365;
+    padding-right: 100px;
 }
-#Forgot{
+#Forgot {
     text-decoration: none;
     color: grey;
 }
 #Forgot::hover {
-  color: #ffd365;
+    color: #ffd365;
 }
 button[type="submit"] {
     background-color: #0ba08b;
     border: none;
-    padding: 0px 50px;
+    padding: 5px 135px;
     border-radius: 30px;
     color: white;
+    margin-bottom: 1%;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
 }
-#Sign_up{
+#Sign_upButton {
     color: #0ba08b;
+}
+.container__div{
+    align-content: center;
+    margin-bottom: 5%;
+}
+.container__div img{
+   width: 25px;
+   margin-right: 3%;
 }

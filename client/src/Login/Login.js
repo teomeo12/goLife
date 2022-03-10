@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Login.css";
 import mail from "../Images/mail.png"
+import password from "../Images/password.png"
+import logo from "../Images/logo3.png"
 
 export default function Login(props) {
   const [data, setData] = useState([]);
@@ -14,33 +16,36 @@ export default function Login(props) {
   }
   return (
     <>
-    <header>
-      <img src=""/>
-      <h1>Sign Up</h1>
-    </header>
-    <div class="triangle"></div>
+      <header>
+        <div className="logo_img">
+          <img src={logo} />
+        </div>
+        <h1>Sign Up</h1>
+      </header>
+      <div class="triangle"></div>
       <form onSubmit={props.onSignin}>
         <div class="container__form">
-            <div>
-                <input type="email" id="username" autoComplete="off" placeholder="Email" ref={props.usernameRef} required/>
-            </div>
-            <div>
-                <input type="password" name="password" placeholder="Password" autoComplete="off" ref={props.passwordRef} required/>
-            </div>
-            <div>
-              <p><a href="" id="Forgot">Forgot password ?</a></p>
-            </div>
-            <div>
-              <img src="/Images/password.png"/>
-                <button type="submit" name="login" onClick={props.onSignup}>
-                    Login
-                </button>
-            </div>
-            <div>
-              <p>Don't have an account ? <a href="" id="Sign_up">Sign Up</a></p>
-            </div>
+          <div class="container__div">
+            <img src={mail} />
+            <input type="email" id="username" autoComplete="off" placeholder="Email" ref={props.usernameRef} required />
           </div>
-        </form>
+          <div class="container__div">
+            <img src={password} />
+            <input type="password" name="password" placeholder="Password" autoComplete="off" ref={props.passwordRef} required />
+          </div>
+          <div>
+            <p><a href="" id="Forgot">Forgot password ?</a></p>
+          </div>
+          <div>
+            <button type="submit" name="login" onClick={props.onSignup}>
+              Login
+            </button>
+          </div>
+          <div>
+            <p>Don't have an account ? <a href="" id="Sign_upButton">Sign Up</a></p>
+          </div>
+        </div>
+      </form>
     </>
   );
 }
