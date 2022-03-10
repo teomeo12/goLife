@@ -5,26 +5,29 @@
   background-color: var(--main-color);
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 999;
   padding: 5% 0 5% 0;
 }
+.header a:first-child{
+  width: 7%;
+}
 .header a{
-  width: 50%;
+  width: 33%;
 }
 .header a img{
   width: 100%;
 }
 
 .container-4{
-  overflow: hidden;
   width: 34%;
   vertical-align: middle;
   white-space: nowrap;
 }
+
 .container-4 input#search{
   width: 75%;
   height: 3rem;
