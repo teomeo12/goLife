@@ -26,11 +26,7 @@ function App() {
         <Route exact={true} path="/login" element={<Login />} />
         <Route exact={true} path="/register" element={<Register />} />
         <Route exact={true} path="/admin" element={<Admin />} />
-        <Route
-          exact={true}
-          path="/ReadFullArticle"
-          element={<ReadFullArticle />}
-        />
+        <Route exact={true} path="/ReadFullArticle/:id" element={<ReadFullArticle />}/>
         <Route exact={true} path="/flying" element={<Flying />} />
         <Route exact={true} path="/travel" element={<Travel />} />
         <Route exact={true} path="/sport" element={<Sport />} />
