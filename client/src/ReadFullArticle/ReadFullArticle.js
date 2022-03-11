@@ -4,13 +4,17 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 export default function ReadFullArticle() {
+
+  let params = useParams();
+  console.log(params.id)
+
   const [data, setData] = useState([]);
 
   async function getArticles() {
-    const data = (await axios.get("http://localhost:8000/articles")).data;
+    const data = (await axios.get("http://localhost:8000/ReadFullArticle/"+params.id)).data;
     setData(data);
     console.log("articles", data);
   }
@@ -44,6 +48,7 @@ export default function ReadFullArticle() {
 
   return (
       <>
+        <Header />
         <div className="contain">
           {data.map((x) => (
               <article key={x.id}>
@@ -53,11 +58,10 @@ export default function ReadFullArticle() {
                     <div>{displayMedia(x.mediaType, x.mediaURL)}</div>
                   </div>
                   <div>
-                    <p dangerouslySetInnerHTML={{ __html: x.content.substring(0, 280) }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: x.content }}></p>
                   </div>
 
                   <Link to={"/ReadFullArticle/"+x.id}>
-                    <button>Read more</button>
                   </Link>
                 </div>
 
@@ -65,7 +69,7 @@ export default function ReadFullArticle() {
               </article>
           ))}
         </div>
-
+        <Footer/>
         {/* <Edit /> */}
       </>
   );

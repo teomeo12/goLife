@@ -15,6 +15,11 @@ routes
     db.all("select * from article", (err, rows) => res.json(rows));
   })
 
+    .get("/ReadFullArticle/:id", (req, res) => {
+        let id = req.params.id;
+        db.all("select * from article where id="+id, (err, rows) => res.json(rows));
+    })
+
   .post("/upload", (req, res) => {
     console.log("server", req.body);
     console.log("image", req.files.Image);
@@ -24,6 +29,7 @@ routes
       res.json({ file: req.files.Image.name });
     });
   })
+
 
   .put("/articles/:id", (req, res) => {
     let title = req.body.title;
