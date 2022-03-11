@@ -59,3 +59,21 @@
   height: 50%;
 }
 /* Header end */
+.Categories{
+ display: flex;
+ padding-top: 2%;
+ padding-right: 2%;
+ margin-bottom: 4%;
+ align-items: center;
+}
+.Categories__container {
+text-align: center;
+}
+.Categories__container a{
+ text-decoration: none;
+ color:black;
+ font-weight: 600;
+  }
+.Categories__container img{
+width: 50%;
+}
