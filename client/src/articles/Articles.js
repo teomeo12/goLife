@@ -17,6 +17,7 @@ export default function Articles() {
   }, []);
 
   function displayMedia(type, url) {
+
     return <img src={"http://localhost:8000/media/" + url} />;
   }
 
@@ -35,36 +36,26 @@ export default function Articles() {
           </a>
         </div>
       </div> */}
-
-      <div className="container">
+      <div className="contain">
         {data.map((x) => (
-          <article
-            className="card m-2"
-            key={x.id}
-            style={{ textAlign: "center", minWidth: "100%" }}
-          >
-            <div className="card-body">
-              <div className="text-muted">
-                <h1 className="Article_title">{x.title}</h1>
-                <div className="Article-image">
+          <article key={x.id}>
+            <div>
+              <div>
+                <h1>{x.title}</h1>
+                <div>
                   {displayMedia(x.mediaType, x.mediaURL)}
                 </div>
               </div>
-              <span className="pull-right delete-icon">
-                <i className="fa fa-times"></i>
+              <span>
+                <i></i>
               </span>
-              <h5 className="pt-2 border-top"></h5>
-              <div className="Article_content">
-                <h1>{x.content}</h1>
+              <h5></h5>
+              <div>
+                <p>{x.content}</p>
               </div>
+              <button>Read more</button>
             </div>
-            <div className="card-footer text-right">
-              <div className="float-left">
-                <span className="badge">{} </span>
-              </div>
-              <div className="float-right"></div>
-              <button className="btn btn-primary">Read more</button>
-            </div>
+
 
             {/* <section dangerouslySetInnerHTML={{ __html: x.content }}></section> */}
           </article>

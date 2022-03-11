@@ -1,42 +1,51 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Login.css";
-import { Form, Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import mail from "../Images/mail.png"
+import password from "../Images/password.png"
+import logo from "../Images/logo3.png"
 
-export default function Edit() {
+export default function Login(props) {
   const [data, setData] = useState([]);
 
   async function handleSubmit(e) {
     e.preventDefault();
-   
-
     console.log("Title", e.target.title.value);
     console.log("Content", e.target.content.value);
     console.log("Image", e.target.myfile.files[0]);
   }
   return (
     <>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
+      <header>
+        <div className="logo_img">
+          <img src={logo} />
+        </div>
+        <h1 className="signup">Sign Up</h1>
+      </header>
+      <div class="triangle"></div>
+      <form onSubmit={props.onSignin}>
+        <div class="container__form">
+          <div class="container__div">
+            <img src={mail} />
+            <input type="email" id="username" autoComplete="off" placeholder="Email" ref={props.usernameRef} required />
+          </div>
+          <div class="container__div">
+            <img src={password} />
+            <input type="password" name="password" placeholder="Password" autoComplete="off" ref={props.passwordRef} required />
+          </div>
+          <div>
+            <p><a href="" id="Forgot">Forgot password ?</a></p>
+          </div>
+          <div>
+            <button type="submit" name="login" onClick={props.onSignup}>
+              Login
+            </button>
+          </div>
+          <div>
+            <p>Don't have an account ? <a href="" id="Sign_upButton">Sign Up</a></p>
+          </div>
+        </div>
+      </form>
     </>
   );
 }

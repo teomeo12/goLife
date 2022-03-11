@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../Header/Header.css";
-import { BiSearchAlt } from "react-icons/bi";
 import logo3 from "../Images/logo3.png";
-// import logo from "../Images/logo2.png";
-// import logo from "../Images/logo3.png";
-//import SearchIcon from "@material-ui/icons/Search";
+import search from "../Images/header/search.png";
+import connect from "../Images/header/account.png";
 
 import { AiOutlineMail } from "react-icons/ai";
 
@@ -53,22 +51,18 @@ export default class Header extends Component {
 
     return (
       <nav className="header">
+        <Link to="/login">
+          <img src={connect}/>
+        </Link>
         <Link to="/">
           <img src={logo3} className="header__logo" alt="Logo" />
         </Link>
-        <div className="header__search">
-          <input
-            className="header__searchInput"
-            type="text"
-            placeholder="Search article..."
-            // onChange={this.handleChange()}
-          />
-          {/* <SearchIcon className="header__searchIcon" /> */}
-          <div className="header__searchIcon">
-            <BiSearchAlt />
+          <div className="container-4">
+            <input type="search" id="search" placeholder="Search..."/>
+            <button className="icon">
+              <img src={search}/>
+            </button>
           </div>
-        </div>
-        
       </nav>
     );
   }
