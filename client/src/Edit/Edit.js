@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Edit.css";
-import { Form, Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+ import { Form, Button } from "react-bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Edit() {
   const [data, setData] = useState([]);

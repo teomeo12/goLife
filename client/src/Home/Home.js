@@ -2,11 +2,7 @@ import './Home.css';
 import Articles from '../Articles/Articles';
 export default function Home() {
     return (
-      <>
-        <h1 className="Home_title">My Online Newspaper !!</h1>
         <Articles/>
-        
-      </>
     );
 }
 
