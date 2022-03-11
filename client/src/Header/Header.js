@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../Header/Header.css";
-//import { BiSearchAlt } from "react-icons/bi";
 import logo3 from "../Images/logo3.png";
 import search from "../Images/header/search.png";
 import connect from "../Images/header/account.png";
-// import logo from "../Images/logo2.png";
-// import logo from "../Images/logo3.png";
-//import SearchIcon from "@material-ui/icons/Search";
 
 import { AiOutlineMail } from "react-icons/ai";
 

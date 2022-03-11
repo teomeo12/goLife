@@ -19,7 +19,7 @@ header img {
     width: 80%;
     margin: auto;
 }
-h1{
+.signup{
     position: absolute;
     display: flex;
     bottom: 18%;
