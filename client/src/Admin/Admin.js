@@ -17,7 +17,26 @@ export default function Admin(props) {
     return (
         <>
             <Header />
-            
+            <form action="" method="">
+            <div className="Admin__container">
+                <div>
+                    <input type="text" placeholder="Title" required />
+                </div>
+                <div>
+                    <textarea id="" name="" placeholder="Type your text just here" rows="33" cols="40">
+                    </textarea>
+                </div>
+                <div>
+                    <input type="text" placeholder="#Tags"  required />
+                </div>
+                <div>
+                    <input type="file" id="Upload"  required accept="image/png, image/jpeg" />
+                </div>
+                <div>
+                    <input type="submit" placeholder="Publish"  required />
+                </div>
+            </div>
+           </form>
             <Footer />
         </>
     );

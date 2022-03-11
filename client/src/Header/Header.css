@@ -58,4 +58,26 @@
 .icon img{
   height: 50%;
 }
+.container_categories{
+    width: 100%;
+    overflow: hidden;
+}
+.categorie-scroll{
+    overflow-x: scroll;
+
+}
+/*scroll bar*/
+.categorie-scroll::-webkit-scrollbar {
+    padding: 10px;
+    width: 50%;
+    height: 2rem;
+    border : black 0.5rem solid;
+    border-radius: 0.5rem;
+    background-color: white; /* or add it to the track */
+}
+.categorie-scroll::-webkit-scrollbar-thumb {
+    background : linear-gradient( to bottom, rgba(255,0,0,0) 0%, rgba(255,0,0,0) 40%, var(--main-color-sun) 40%, var(--main-color-sun) 60%, rgba(255,0,0,0) 60%, rgba(255,0,0,0) 100% );
+    border-radius: 50rem;
+}
+
 /* Header end */
