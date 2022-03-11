@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Articles.css";
 import Edit from "../Edit/Edit";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 export default function Articles() {
+
+
+
+
   const [data, setData] = useState([]);
 
   async function getArticles() {
