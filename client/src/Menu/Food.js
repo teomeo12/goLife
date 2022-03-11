@@ -9,7 +9,8 @@ import Articles from "../Articles/Articles";
 export default function Food() {
   return (
     <>
-      <Header />
+          <Header />
+          <h1>Food</h1>
       <Articles />
       <Footer />
     </>

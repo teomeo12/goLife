@@ -6,11 +6,11 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Articles from "../Articles/Articles";
 
-export default function Climate() {
+export default function Sport() {
   return (
     <>
       <Header />
-      <h1>Climate</h1>
+      <h1>Sport</h1>
       <Articles />
       <Footer />
     </>
