@@ -77,8 +77,10 @@ export default class Header extends Component {
             <div className="Categories">
               <div className="Categories__container">
                 <a href="">
-                  <img src={menu} />
-                  <p>HOME</p>
+                  <Link to="/">
+                    <img src={menu} />
+                    <p>HOME</p>
+                  </Link>
                 </a>
               </div>
               <div className="Categories__container">
