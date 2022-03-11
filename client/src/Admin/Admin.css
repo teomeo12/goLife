@@ -19,9 +19,8 @@
 }
 
 .Admin__container input[type="file"] {
-    background-color: none;
     border: none;
-    width: 90px;
+    width: 30px;
   }
   .Admin__container input[type="file"]::-webkit-file-upload-button {
     visibility: hidden;
