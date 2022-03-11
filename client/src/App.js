@@ -12,6 +12,8 @@ import Food from "./Menu/Food";
 import House from "./Menu/House";
 import Travel from "./Menu/Travel";
 import Wellbeing from "./Menu/Wellbeing";
+import Flying from "./Menu/Flying";
+import Sport from "./Menu/Sport";
 
 //import Login, { ProtectedRoute, NotProtectedLink } from "./Login";
 
@@ -29,7 +31,9 @@ function App() {
           path="/ReadFullArticle"
           element={<ReadFullArticle />}
         />
+        <Route exact={true} path="/flying" element={<Flying />} />
         <Route exact={true} path="/travel" element={<Travel />} />
+        <Route exact={true} path="/sport" element={<Sport />} />
         <Route exact={true} path="/food" element={<Food />} />
         <Route exact={true} path="/wellbeing" element={<Wellbeing />} />
         <Route exact={true} path="/fashion" element={<Fashion />} />

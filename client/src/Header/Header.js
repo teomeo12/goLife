@@ -63,7 +63,6 @@ export default class Header extends Component {
           </Link>
           <Link to="/">
             <img src={logo3} className="header__logo" alt="Logo" />
-            
           </Link>
           <div className="container-4">
             <input type="search" id="search" placeholder="Search..." />
@@ -84,32 +83,42 @@ export default class Header extends Component {
               </div>
               <div className="Categories__container">
                 <a href="">
-                  <img src={flying} />
-                  <p>FLYING</p>
+                  <Link to="/flying">
+                    <img src={flying} />
+                    <p>FLYING</p>
+                  </Link>
                 </a>
               </div>
               <div className="Categories__container">
                 <a href="">
-                  <img src={food} />
-                  <p>FOOD</p>
+                  <Link to="/food">
+                    <img src={food} />
+                    <p>FOOD</p>
+                  </Link>
                 </a>
               </div>
               <div className="Categories__container">
                 <a href="">
-                  <img src={sport} />
-                  <p>SPORT</p>
+                  <Link to="/sport">
+                    <img src={sport} />
+                    <p>SPORT</p>
+                  </Link>
                 </a>
               </div>
               <div className="Categories__container">
                 <a href="">
-                  <img src={house} />
-                  <p>HOUSE</p>
+                  <Link to="/house">
+                    <img src={house} />
+                    <p>HOUSE</p>
+                  </Link>
                 </a>
               </div>
               <div className="Categories__container">
                 <a href="">
-                  <img src={fashion} alt="img-fashion" />
-                  <p>FASHION</p>
+                  <Link to="/fashion">
+                    <img src={fashion} alt="img-fashion" />
+                    <p>FASHION</p>
+                  </Link>
                 </a>
               </div>
             </div>
@@ -156,7 +165,6 @@ export default class Header extends Component {
 // }
 
 //to={"/Register"}
-
 
 <div className="header__nav">
   <Link to="/login" className="header__link">

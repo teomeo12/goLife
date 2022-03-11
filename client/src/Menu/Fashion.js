@@ -10,6 +10,7 @@ export default function Fashion() {
   return (
     <>
       <Header />
+      <h1>Fashion</h1>
       <Articles />
       <Footer />
     </>
