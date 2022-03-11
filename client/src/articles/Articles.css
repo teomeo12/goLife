@@ -11,7 +11,7 @@ article:first-child p{
   font-size: 50%;
 }
 
-article:first-child button{
+article button{
   text-align: center;
   display: block;
   margin: auto;
@@ -32,7 +32,7 @@ padding: 2px 24px;
 width: auto;
 }
 
-article:first-child button:hover {
+article button:hover {
   background: #F6F9FE;
   color: #174ea6;
 }

@@ -11,6 +11,7 @@ import sport from "../Images/menu/sport.png";
 import house from "../Images/menu/house.png";
 import food from "../Images/menu/food.png";
 import { AiOutlineMail } from "react-icons/ai";
+import Login from "../Login/Login";
 
 //mport emazon from "../images/eMazon.png";
 // import {
@@ -62,6 +63,7 @@ export default class Header extends Component {
           </Link>
           <Link to="/">
             <img src={logo3} className="header__logo" alt="Logo" />
+            
           </Link>
           <div className="container-4">
             <input type="search" id="search" placeholder="Search..." />

@@ -4,6 +4,7 @@ import "./Admin.css";
 import logo from "../Images/logo3.png"
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import "./Articles.css";
 
 export default function Admin(props) {
     const [data, setData] = useState([]);
