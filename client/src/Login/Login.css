@@ -19,6 +19,16 @@ header img {
     width: 80%;
     margin: auto;
 }
+header h1{
+    bottom: 13%;
+    left: 12%;
+    position: absolute;
+    display: flex;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
+}
 .signup{
     position: absolute;
     display: flex;
@@ -69,8 +79,10 @@ button[type="submit"] {
     color: #0ba08b;
 }
 .container__div{
-    align-content: center;
     margin-bottom: 15%;
+}
+.container__div input:focus{
+    outline: none;
 }
 .container__div img{
    width: 25px;
