@@ -4,6 +4,12 @@ import "../Header/Header.css";
 import logo3 from "../Images/logo3.png";
 import search from "../Images/header/search.png";
 import connect from "../Images/header/account.png";
+import menu from "../Images/menu/menu.png";
+import flying from "../Images/menu/flying.png";
+import fashion from "../Images/menu/fashion.png";
+import sport from "../Images/menu/sport.png";
+import house from "../Images/menu/house.png";
+import food from "../Images/menu/food.png";
 import { AiOutlineMail } from "react-icons/ai";
 
 //mport emazon from "../images/eMazon.png";
@@ -49,6 +55,7 @@ export default class Header extends Component {
     // const [placeholder] = useState("Search by Title, Director, Year...");
 
     return (
+        <>
       <nav className="header">
         <Link to="/login">
           <img src={connect}/>
@@ -63,6 +70,50 @@ export default class Header extends Component {
             </button>
           </div>
       </nav>
+
+    <div className="container_categories">
+      <div className="categorie-scroll contain">
+        <div className="Categories">
+          <div className="Categories__container">
+            <a href="">
+              <img src={menu} />
+              <p>HOME</p>
+            </a>
+          </div>
+          <div className="Categories__container">
+            <a href="">
+              <img src={flying} />
+              <p>FLYING</p>
+            </a>
+          </div>
+          <div className="Categories__container">
+            <a href="">
+              <img src={food} />
+              <p>FOOD</p>
+            </a>
+          </div>
+          <div className="Categories__container">
+            <a href="">
+              <img src={sport} />
+              <p>SPORT</p>
+            </a>
+          </div>
+          <div className="Categories__container">
+            <a href="">
+              <img src={house} />
+              <p>HOUSE</p>
+            </a>
+          </div>
+          <div className="Categories__container">
+            <a href="">
+              <img src={fashion} alt="img-fashion"/>
+              <p>FASHION</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+        </>
     );
   }
 }

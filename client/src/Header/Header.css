@@ -58,6 +58,8 @@
 .icon img{
   height: 50%;
 }
+
+
 .container_categories{
     width: 100%;
     overflow: hidden;
@@ -79,5 +81,36 @@
     background : linear-gradient( to bottom, rgba(255,0,0,0) 0%, rgba(255,0,0,0) 40%, var(--main-color-sun) 40%, var(--main-color-sun) 60%, rgba(255,0,0,0) 60%, rgba(255,0,0,0) 100% );
     border-radius: 50rem;
 }
+
+/* Header end */
+.Categories{
+    width: 50rem;
+    display: flex;
+    align-items: center;
+
+}
+.Categories__container {
+    text-align: center;
+}
+.Categories__container a{
+    text-decoration: none;
+    color:black;
+    font-weight: 600;
+    margin: 2rem 2rem 0;
+}
+.Categories__container img{
+    height: 4rem;
+    width: auto;
+}
+
+.Categories__container a{
+    display: inline-block;
+}
+
+.Categories__container p{
+    font-family: "Fredoka One", serif;
+    font-size: 2rem;
+}
+
 
 /* Header end */
