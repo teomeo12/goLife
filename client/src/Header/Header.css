@@ -58,13 +58,40 @@
 .icon img{
   height: 50%;
 }
+.container_categories{
+    width: 100%;
+    overflow: hidden;
+}
+.categorie-scroll{
+    overflow-x: scroll;
+}
+/*scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* Header end */
 .Categories{
+    width: 50rem;
  display: flex;
- padding-top: 2%;
- padding-right: 2%;
- margin-bottom: 4%;
  align-items: center;
+
 }
 .Categories__container {
 text-align: center;
@@ -73,7 +100,18 @@ text-align: center;
  text-decoration: none;
  color:black;
  font-weight: 600;
+margin: 2rem 2rem 0;
   }
 .Categories__container img{
-width: 50%;
+height: 5rem;
+width: auto;
+}
+
+.Categories__container a{
+    display: inline-block;
+}
+
+.Categories__container p{
+    font-family: "Fredoka One", serif;
+    font-size: 2rem;
 }
