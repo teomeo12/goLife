@@ -13,7 +13,8 @@ export default function Login(props) {
     console.log("Title", e.target.title.value);
     console.log("Content", e.target.content.value);
     console.log("Image", e.target.myfile.files[0]);
-  }
+    }
+    
   return (
     <>
       <header>
@@ -51,26 +52,3 @@ export default function Login(props) {
 }
 
 
-{/* <Form onSubmit={handleSubmit}>
-  <Form.Group className="mb-3" controlId="title">
-    <Form.Label>User Name</Form.Label>
-    <Form.Control type="text" placeholder="Title" />
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
-  </Form.Group>
-
-  <Form.Group className="mb-3" controlId="content">
-    <Form.Label>Content</Form.Label>
-    <Form.Control type="text" placeholder="Content" />
-  </Form.Group>
-
-  <Form.Group className="mb-3" controlId="myfile">
-    <Form.Label>Image</Form.Label>
-    <Form.Control type="file" />
-  </Form.Group>
-
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>; */}

@@ -5,7 +5,3 @@ export default function Home() {
         <Articles/>
     );
 }
-
-// onClick={() => {
-//                     this.props.onDelete(this.state.product);
-//                   }}
