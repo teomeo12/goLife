@@ -1,0 +1,40 @@
+.Admin__container {
+    justify-content: center;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+.Admin__container input[type="text"] ,textarea {
+    background-color: rgb(231, 231, 231);
+    border: solid 2px black;
+    margin-bottom: 5%;
+}
+
+.Admin__container input[type="submit"] {
+    background-color: #16a3d8;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 2%;
+    font-weight: 700;
+    margin-left: 70%;
+}
+
+.Admin__container input[type="file"] {
+    background-color: none;
+    border: none;
+    width: 90px;
+  }
+  .Admin__container input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .Admin__container input[type="file"]::before {
+    content: 'Upload';
+    background-color: #FFD365;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10pt;
+  }
