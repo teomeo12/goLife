@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Articles.css";
 import Edit from "../Edit/Edit";
+import { Link } from "react-router-dom";
+
 
 export default function Articles() {
   const [data, setData] = useState([]);
@@ -23,7 +25,7 @@ export default function Articles() {
     if (type === "video") {
       return (
         <iframe
-          width="500"
+          width="360"
           height="315"
           src="https://www.youtube.com/embed/NTXbCdS5hdY"
           title="YouTube video player"
@@ -56,7 +58,10 @@ export default function Articles() {
               <div>
                 <p dangerouslySetInnerHTML={{ __html: x.content }}></p>
               </div>
-              <button onClick={fullReadArtticle}>Read more</button>
+             
+              <Link to="/ReadFullArticle">
+                <button>Read more</button>
+              </Link>
             </div>
 
             {/* <section dangerouslySetInnerHTML={{ __html: x.content }}></section> */}

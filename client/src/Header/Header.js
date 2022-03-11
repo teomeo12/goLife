@@ -32,7 +32,7 @@ export default class Header extends Component {
   //     };
   //   }
 
-  //   handleChange = (e) => {
+  //   handleFilter = (e) => {
   //     // this.setState({ [e.target.name]: e.target.value });
 
   //     const { cars, searchText } = this.state;
@@ -55,65 +55,65 @@ export default class Header extends Component {
     // const [placeholder] = useState("Search by Title, Director, Year...");
 
     return (
-        <>
-      <nav className="header">
-        <Link to="/login">
-          <img src={connect}/>
-        </Link>
-        <Link to="/">
-          <img src={logo3} className="header__logo" alt="Logo" />
-        </Link>
+      <>
+        <nav className="header">
+          <Link to="/login">
+            <img src={connect} />
+          </Link>
+          <Link to="/">
+            <img src={logo3} className="header__logo" alt="Logo" />
+          </Link>
           <div className="container-4">
-            <input type="search" id="search" placeholder="Search..."/>
-            <button className="icon">
-              <img src={search}/>
+            <input type="search" id="search" placeholder="Search..." />
+            <button className="icon" onchange="{handleFilter}">
+              <img src={search} />
             </button>
           </div>
-      </nav>
+        </nav>
 
-    <div className="container_categories">
-      <div className="categorie-scroll contain">
-        <div className="Categories">
-          <div className="Categories__container">
-            <a href="">
-              <img src={menu} />
-              <p>HOME</p>
-            </a>
-          </div>
-          <div className="Categories__container">
-            <a href="">
-              <img src={flying} />
-              <p>FLYING</p>
-            </a>
-          </div>
-          <div className="Categories__container">
-            <a href="">
-              <img src={food} />
-              <p>FOOD</p>
-            </a>
-          </div>
-          <div className="Categories__container">
-            <a href="">
-              <img src={sport} />
-              <p>SPORT</p>
-            </a>
-          </div>
-          <div className="Categories__container">
-            <a href="">
-              <img src={house} />
-              <p>HOUSE</p>
-            </a>
-          </div>
-          <div className="Categories__container">
-            <a href="">
-              <img src={fashion} alt="img-fashion"/>
-              <p>FASHION</p>
-            </a>
+        <div className="container_categories">
+          <div className="categorie-scroll contain">
+            <div className="Categories">
+              <div className="Categories__container">
+                <a href="">
+                  <img src={menu} />
+                  <p>HOME</p>
+                </a>
+              </div>
+              <div className="Categories__container">
+                <a href="">
+                  <img src={flying} />
+                  <p>FLYING</p>
+                </a>
+              </div>
+              <div className="Categories__container">
+                <a href="">
+                  <img src={food} />
+                  <p>FOOD</p>
+                </a>
+              </div>
+              <div className="Categories__container">
+                <a href="">
+                  <img src={sport} />
+                  <p>SPORT</p>
+                </a>
+              </div>
+              <div className="Categories__container">
+                <a href="">
+                  <img src={house} />
+                  <p>HOUSE</p>
+                </a>
+              </div>
+              <div className="Categories__container">
+                <a href="">
+                  <img src={fashion} alt="img-fashion" />
+                  <p>FASHION</p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-        </>
+      </>
     );
   }
 }
