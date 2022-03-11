@@ -9,6 +9,7 @@ import flying from "../Images/menu/flying.png";
 import food from "../Images/menu/food.png";
 import house from "../Images/menu/house.png";
 import menu from "../Images/menu/menu.png";
+import sport from "../Images/menu/sport.png";
 import { AiOutlineMail } from "react-icons/ai";
 
 //mport emazon from "../images/eMazon.png";
@@ -69,45 +70,48 @@ export default class Header extends Component {
             </button>
           </div>
         </nav>
-
-        <div class="Categories">
-          <div class="Categories__container">
+  <div className="container_categories">
+    <div className="categorie-scroll contain">
+        <div className="Categories">
+          <div className="Categories__container">
             <a href="">
               <img src={menu} />
               <p>HOME</p>
             </a>
           </div>
-          <div class="Categories__container">
+          <div className="Categories__container">
             <a href="">
               <img src={flying} />
               <p>FLYING</p>
             </a>
           </div>
-          <div class="Categories__container">
+          <div className="Categories__container">
             <a href="">
               <img src={food} />
               <p>FOOD</p>
             </a>
           </div>
-          <div class="Categories__container">
+          <div className="Categories__container">
             <a href="">
-              <img src={house} />
+              <img src={sport} />
               <p>SPORT</p>
             </a>
           </div>
-          <div class="Categories__container">
+          <div className="Categories__container">
             <a href="">
               <img src={house} />
               <p>HOUSE</p>
             </a>
           </div>
-          <div class="Categories__container">
+          <div className="Categories__container">
             <a href="">
-              <img src={fashion} />
+              <img src={fashion} alt="img-fashion"/>
               <p>FASHION</p>
             </a>
           </div>
         </div>
+    </div>
+  </div>
       </>
     );
   }
