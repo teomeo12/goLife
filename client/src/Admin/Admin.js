@@ -17,7 +17,7 @@ export default function Admin(props) {
     return (
         <>
             <Header />
-            
+
             <Footer />
         </>
     );
