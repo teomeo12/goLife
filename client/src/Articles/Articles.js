@@ -51,15 +51,11 @@ export default function Articles() {
                 <h1>{x.title}</h1>
                 <div>{displayMedia(x.mediaType, x.mediaURL)}</div>
               </div>
-              <span>
-                <i></i>
-              </span>
-              <h5></h5>
               <div>
-                <p dangerouslySetInnerHTML={{ __html: x.content }}></p>
+                <p dangerouslySetInnerHTML={{ __html: x.content.substring(0, 280) }}></p>
               </div>
              
-              <Link to="/ReadFullArticle">
+              <Link to={"/ReadFullArticle/"+x.id}>
                 <button>Read more</button>
               </Link>
             </div>
