@@ -10,8 +10,6 @@ footer{
 
 .category-section ul{
     margin: 0;
-    height: 0;
-    overflow: hidden;
 }
 .category-box:checked{
     height: auto;
