@@ -164,8 +164,8 @@ The No. 1 spot for 2021, St. Pete Beach in St. Petersburg, Florida, didnt crack 
 
 
 `,
-    thumbnailURL: "2.jpg",
-    mediaURL: "2.jpg",
+    thumbnailURL: "",
+    mediaURL: "7.jpg",
     mediaType: "image",
   },
 ];
@@ -252,7 +252,7 @@ While this study did not look at how well these masks prevent the spread of COVI
 `,
     thumbnailURL: "",
     mediaURL: "2.jpg",
-    mediaType: "",
+    mediaType: "image",
   },
 ];
 
@@ -360,7 +360,7 @@ Ultimately, the show achieved what the designer does best: It forced the viewer 
 
 `,
     thumbnailURL: "",
-    mediaURL: "https://www.youtube.com/watch?v=NTXbCdS5hdY",
+    mediaURL: "www.youtube.com/embed/NTXbCdS5hdY",
     mediaType: "video",
   },
 ];

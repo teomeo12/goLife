@@ -17,10 +17,25 @@ export default function Articles() {
   }, []);
 
   function displayMedia(type, url) {
-    return <img src={"http://localhost:8000/media/" + url} />;
+    if (type === "image") {
+      return <img src={"http://localhost:8000/media/" + url} />;
+    }
+    if (type === "video") {
+      return (
+        <iframe
+          width="500"
+          height="315"
+          src="https://www.youtube.com/embed/NTXbCdS5hdY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      );
+    }
+    return null;
   }
   function fullReadArtticle(type, url) {
-
     return <img src={"http://localhost:8000/" + url} />;
   }
 
