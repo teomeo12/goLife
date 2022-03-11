@@ -1,7 +1,6 @@
 footer{
     background: var(--main-color);
 }
-
 .category-box{
     opacity: 0;
     position: absolute;

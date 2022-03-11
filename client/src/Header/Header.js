@@ -4,7 +4,6 @@ import "../Header/Header.css";
 import logo3 from "../Images/logo3.png";
 import search from "../Images/header/search.png";
 import connect from "../Images/header/account.png";
-
 import { AiOutlineMail } from "react-icons/ai";
 
 //mport emazon from "../images/eMazon.png";
@@ -67,7 +66,6 @@ export default class Header extends Component {
     );
   }
 }
-
 //  {
 //    localStorage.accessLevel > ACCESS_LEVEL_GUEST ? (
 //      <div className="header__optionTwo">

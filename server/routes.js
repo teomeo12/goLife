@@ -11,7 +11,7 @@ routes
     res.json("Hello world!!");
   })
 
-  .get("/articles", (req, res) => {
+  .get("/Articles", (req, res) => {
     db.all("select * from article", (err, rows) => res.json(rows));
   })
 

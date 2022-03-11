@@ -12,12 +12,12 @@ function App() {
   return (
     <>
       <Header />
-          <Routes>
-            <Route exact={true} path="/" element={<Home />} />
-            <Route exact={true} path="/articles" element={<Articles />} />
-            <Route exact={true} path="/login" element={<Login />} />
-            <Route path="*" element={() => <p>Page Not Found</p>} />
-          </Routes>
+      <Routes>
+        <Route exact={true} path="/" element={<Home />} />
+        <Route exact={true} path="/articles" element={<Articles />} />
+        <Route exact={true} path="/login" element={<Login />} />
+        <Route path="*" element={() => <p>Page Not Found</p>} />
+      </Routes>
       <Footer />
     </>
   );
