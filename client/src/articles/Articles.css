@@ -1,13 +1,13 @@
 /*article 1*/
-article:first-child{
+article{
   color: #000000;
   font-size: 4rem;
 }
-article:first-child h1{
+article h1{
   font-size:70%;
 }
 
-article:first-child p{
+article p{
   font-size: 50%;
 }
 
@@ -37,12 +37,12 @@ article button:hover {
   color: #174ea6;
 }
 
-article:first-child button:active {
+article button:active {
   box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
   outline: none;
 }
 
-article:first-child button:focus {
+article button:focus {
   outline: none;
   border: 2px solid #4285f4;
 }
