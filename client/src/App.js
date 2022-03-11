@@ -16,7 +16,7 @@ function App() {
         <Route exact={true} path="/articles" element={<Articles />} />
         <Route exact={true} path="/login" element={<Login />} />
         <Route exact={true} path="/admin" element={<Admin />} />
-        <Route exact={true} path="/ReadFullArticle" element={<ReadFullArticle />} />
+        <Route exact={true} path="/ReadFullArticle/:id" element={<ReadFullArticle />} />
         <Route path="*" element={() => <p>Page Not Found</p>} />
       </Routes>
     </>

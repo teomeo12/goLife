@@ -55,7 +55,7 @@ export default function Articles() {
                 <p dangerouslySetInnerHTML={{ __html: x.content.substring(0, 280) }}></p>
               </div>
              
-              <Link to="/ReadFullArticle">
+              <Link to={"/ReadFullArticle/"+x.id}>
                 <button>Read more</button>
               </Link>
             </div>
