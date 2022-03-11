@@ -1,6 +1,15 @@
 footer{
     background: var(--main-color);
 }
+footer ul {
+    font-size: 2rem;
+}
+footer h3:last-child{
+    margin-bottom : 0;
+}
+footer ul:last-child{
+    margin-bottom : 0;
+}
 .category-box{
     opacity: 0;
     position: absolute;
@@ -9,9 +18,15 @@ footer{
 
 .category-section ul{
     margin: 0;
-    height: 0;
-    overflow: hidden;
 }
 .category-box:checked{
     height: auto;
+}
+.footer-title{
+    font-size: 2.5rem;
+    font-family: "Fredoka One", serif;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
