@@ -5,17 +5,26 @@ import "./App.css";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Login from "./Login/Login";
+import Register from "./Register/Register";
 
 function App() {
   return (
     <>
       <Header />
-          <Routes>
-            <Route exact={true} path="/" element={<Home />} />
-            <Route exact={true} path="/articles" element={<Articles />} />
-            <Route exact={true} path="/login" element={<Login />} />
-            <Route path="*" element={() => <p>Page Not Found</p>} />
-          </Routes>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/articles">News</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/register">Register</Link>
+      </nav>
+
+      <Routes>
+        <Route exact={true} path="/" element={<Home />} />
+        <Route exact={true} path="/articles" element={<Articles />} />
+        <Route exact={true} path="/login" element={<Login />} />
+        <Route exact={true} path="/register" element={<Register />} />
+        <Route path="*" element={() => <p>Page Not Found</p>} />
+      </Routes>
       <Footer />
     </>
   );
