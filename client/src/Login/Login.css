@@ -38,11 +38,13 @@ h1{
 }
 .container__form {
     text-align: center;
+    margin-top: 10%;
 }
 form div input {
     border: none;
     border-bottom: solid #ffd365;
     padding-right: 100px;
+    padding-bottom:1.5% ;
 }
 #Forgot {
     text-decoration: none;
@@ -57,7 +59,8 @@ button[type="submit"] {
     padding: 5px 135px;
     border-radius: 30px;
     color: white;
-    margin-bottom: 1%;
+    margin-top: 5%;
+    margin-bottom: 15%;
     font-style: italic;
     font-weight: 400;
     font-size: 20px;
@@ -67,7 +70,7 @@ button[type="submit"] {
 }
 .container__div{
     align-content: center;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
 }
 .container__div img{
    width: 25px;
