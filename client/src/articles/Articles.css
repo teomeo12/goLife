@@ -1,13 +1,13 @@
 /*article 1*/
-article:first-child{
+article{
   color: #000000;
   font-size: 4rem;
 }
-article:first-child h1{
+article h1{
   font-size:70%;
 }
 
-article:first-child p{
+article p{
   font-size: 50%;
 }
 
