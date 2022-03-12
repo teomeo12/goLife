@@ -17,15 +17,37 @@ let query = [
   "DROP TABLE IF EXISTS article",
   "DROP TABLE IF EXISTS tag",
   "DROP TABLE IF EXISTS article_tag",
+  "DROP TABLE IF EXISTS users",
+  //cREATE FIRST TABLE article
   "CREATE TABLE article (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, content TEXT NOT NULL, thumbnailURL TEXT, mediaType TEXT, mediaURL TEXT, leadStory INTEGER)",
+  //cREATE SECOND  TABLE tag
   "CREATE TABLE tag (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL)",
+
+  //cREATE third  TABLE article_tag
   "CREATE TABLE article_tag (id INTEGER PRIMARY KEY AUTOINCREMENT, idArticle INTEGER REFERENCES article(id), idTag INTEGER REFERENCES tag(id))",
+  //cREATE 4  TABLE article_tag
+  "CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT, username varchar, password varchar)",
+
+  "INSERT INTO article_tag (idArticle, idTag) values ( 1,1)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 2,1)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 3,2)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 4,3)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 5,3)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 6,3)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 7,5)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 8,1)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 9,1)",
+  "INSERT INTO article_tag (idArticle, idTag) values ( 10,4)",
+
   "INSERT INTO tag (name) values ('travel')",
   "INSERT INTO tag (name) values ('food')",
   "INSERT INTO tag (name) values ('well-being')",
   "INSERT INTO tag (name) values ('climate')",
-  "INSERT INTO tag (name) values ('fashion')",
   "INSERT INTO tag (name) values ('home')",
+  "INSERT INTO tag (name) values ('fashion')",
+
+  "INSERT INTO users (username,password) values ('admin','123')",
+  "INSERT INTO users (username,password) values ('user1','1234')",
 ];
 
 db.serialize(() => {
@@ -41,23 +63,25 @@ db.serialize(() => {
 let query1 = [
   {
     title: `The top 10 most visited US National Park sites in 2021`,
-    content: `(CNN) — Stir-crazy from the pandemic, visitors poured into US national parks and related sites last year -- and they especially paid calls to the marquee names.
-Roughly 297.1 million total visits were recorded in 2021 by the National Park Service, which released an in-depth visitation report on Wednesday.
+    content: `<p>(CNN) — Stir-crazy from the pandemic, visitors poured into US national parks and related sites last year -- and they especially paid calls to the marquee names.
+Roughly 297.1 million total visits were recorded in 2021 by the National Park Service, which released an in-depth visitation report on Wednesday.</p>
+
 The NPS said that last years visitation increased by 60 million over 2020. That is when Covid-19 closed facilities in most parks for at least part of the year. Across the entire National Park System, the numbers still remained below pre-pandemic totals.
 However, it was a different story for the best-known sites, which were inundated with visitors. Forty-four places actually set a record for recreation visits in 2021.
-Top 10 most visited sites
-<strong>Of 423 sites</strong> in the National Park System, the top 25 got more than half of the systems total number of visits.
+<strong>Top 10 most visited sites</strong>
+Of 423 sites in the National Park System, the top 25 got more than half of the systems total number of visits.
 These were the top 10 for 2021, which includes national parks but also parkways, recreation areas, memorials and related sites (figures are rounded off):
-<ul>      1. Blue Ridge Parkway: 15.9 million
-            2. Great Smoky Mountains National Park: 14.1 million
-            3. Golden Gate National Recreation Area: 13.7 million
-            4. Gateway National Recreation Area: 9.1 million
-            5. Lake Mead National Recreation Area: 7.6 million
-            6. George Washington Memorial Parkway: 6.8 million
-            7. Natchez Trace Parkway: 6.4 million
-            8. Lincoln Memorial: 5.8 million
-            9. Gulf Islands National Seashore: 5.5 million
-            10. Zion National Park: 5 million
+<ul>   
+<li>1. Blue Ridge Parkway: 15.9 million</li>   
+           <li> 2. Great Smoky Mountains National Park: 14.1 million</li>
+          <li>  3. Golden Gate National Recreation Area: 13.7 million</li>
+          <li>  4. Gateway National Recreation Area: 9.1 million</li>
+           <li> 5. Lake Mead National Recreation Area: 7.6 million</li>
+          <li>  6. George Washington Memorial Parkway: 6.8 million</li>
+          <li>  7. Natchez Trace Parkway: 6.4 million</li>
+          <li>  8. Lincoln Memorial: 5.8 million</li>
+           <li> 9. Gulf Islands National Seashore: 5.5 million</li>
+           <li> 10. Zion National Park: 5 million</li>
 </ul>
 The Blue Ridge Parkway, which covers 469 miles in the Appalachians of North Carolina and Virginia, kept its title of the most-visited site in the system.
 Great Smoky Mountains National Park set a visitation record for 2021, passing 14 million recreation visits for the first time, NPS said in its report.
@@ -65,16 +89,19 @@ Top 10 national parks
  
 The Bass Harbor Lighthouse is seen at sunset at Acadia National Park in Maine.
 Of those 400+ sites in the entire system, only 63 of them are actually designated a "national park." These are most visited national parks of 2021 (figures are rounded off):
-1. Great Smoky Mountains National Park: 14.16 million
-2. Zion National Park: 5.03 million
-3. Yellowstone National Park: 4.86 million
-4. Grand Canyon National Park: 4.53 million
-5. Rocky Mountain National Park: 4.43 million
-6. Acadia National Park: 4.06 million
-7. Grand Teton National Park: 3.88 million
-8. Yosemite National Park: 3.28 million
-9. Indiana Dunes National Park: 3.17 million
-10. Glacier National Park: 3.08 million
+<ul>
+<li> 1. Great Smoky Mountains National Park: 14.16 million</li>
+<li>2. Zion National Park: 5.03 million</li>
+<li>3. Yellowstone National Park: 4.86 million</li>
+<li>4. Grand Canyon National Park: 4.53 million</li>
+<li>5. Rocky Mountain National Park: 4.43 million</li>
+<li>6. Acadia National Park: 4.06 million</li>
+<li>7. Grand Teton National Park: 3.88 million</li>
+<li>8. Yosemite National Park: 3.28 million</li>
+<li>9. Indiana Dunes National Park: 3.17 million</li>
+<li>10. Glacier National Park: 3.08 million</li>
+</ul>
+
 If you want to really avoid the crowds and be alone with nature, Kobuk Valley National Park in northwestern Alaska had only 11,540 recreational visits in 2021. Even by Alaska standards, this place is remote.
 NPS to visitors: Lets spread it out
 Long lines and closed signs sometimes greeted visitors at the most popular sites last year. This prompted the Park Service to impose new systems to control crowds. For instance, Arches National Park in Utah is rolling out a timed entry program, with reservations set out three months in advance.
@@ -114,23 +141,26 @@ db.serialize(() => {
 let query2 = [
   {
     title: `Worlds top 10 best beaches for 2022, according to Tripadvisor`,
-    content: `(CNN) — Picture a warm, pristine paradise. White-sand beaches. Turquoise-tinged water clear as gin. And you have got the No. 1 beach in the world for 2022, according to Tripadvisor users.
+    content: `<p>(CNN) — Picture a warm, pristine paradise. White-sand beaches. Turquoise-tinged water clear as gin. And you have got the No. 1 beach in the world for 2022, according to Tripadvisor users.
 The travel platform has just released the second of its annual Travelers Choice Awards for 2022: The Best of the Best Beaches.
 Coming out on top is Grace Bay Beach in the Turks and Caicos islands.
-This lovely spot on the Atlantic Ocean isnt exactly new to the best beach circuit. For Tripadvisors 2021 awards, it was ranked No. 4.
-Worlds top 10 best beaches for 2022
+This lovely spot on the Atlantic Ocean isnt exactly new to the best beach circuit. For Tripadvisors 2021 awards, it was ranked No. 4.</p>
+<strong>Worlds top 10 best beaches for 2022</strong>
+
 The Caribbean has the most beaches in this years top 10 list, and five continents are represented in the tally. Brazil is the only destination to have more than one entry, clocking in an impressive three beaches.
 For 2022, the best beaches are:
-1. Grace Bay Beach: Providenciales, Turks and Caicos
-2. Varadero Beach: Varadero, Cuba
-3. Turquoise Bay: Exmouth, Australia
-4. Quarta Praia: Morro de Sao Paulo, Brazil
-5. Eagle Beach: Palm - Eagle Beach, Aruba
-6. Radhanagar Beach: Havelock Island, India
-7. Baia do Sancho: Fernando de Noronha, Brazil
-8. Trunk Bay Beach: Virgin Islands National Park, US Virgin Islands
-9. Baía dos Golfinhos: Praia da Pipa, Brazil
-10. Spiaggia dei Conigli: Lampedusa, Italy
+<ul>
+<li>1. Grace Bay Beach: Providenciales, Turks and Caicos</li>
+<li>2. Varadero Beach: Varadero, Cuba</li>
+<li>3. Turquoise Bay: Exmouth, Australia</li>
+<li>4. Quarta Praia: Morro de Sao Paulo, Brazil</li>
+<li>5. Eagle Beach: Palm - Eagle Beach, Aruba</li>
+<li>6. Radhanagar Beach: Havelock Island, India</li>
+<li>7. Baia do Sancho: Fernando de Noronha, Brazil</li>
+<li>8. Trunk Bay Beach: Virgin Islands National Park, US Virgin Islands</li>
+<li>9. Baía dos Golfinhos: Praia da Pipa, Brazil</li>
+<li>10. Spiaggia dei Conigli: Lampedusa, Italy</li></ul>
+
 Last years No.1 -- Whitehaven Beach on Whitsunday Island in Australia -- didnt crack the top 10 this year.
 Grace Bay Beachs appeal
 Tripadvisor said in a news release that Grace Bay beach had more than 7,200 reviews to date, and that 90% of them rate it at five "bubbles," its highest ranking.

@@ -18,17 +18,21 @@ export default function Footer() {
 
     const [ulVisibleCat,setUlVisibleCat]=useState(false)
     const [ulVisibleLog,setUlVisibleLog]=useState(false)
-    const jsxCat= <ul>
-        <li>salut</li>
-        <li>hello</li>
-        <li>yooo</li>
-    </ul>;
+    const jsxCat = (
+      <ul>
+        <li className="categories">Travel</li>
+        <li className="categories">Food</li>
+        <li className="categories">Sport</li>
+        <li className="categories">House</li>
+        <li className="categories">Fashion</li>
+      </ul>
+    );
     const jsless = "-";
 
     const jsmore = "+";
 
     const jsxLog= <ul>
-        <li><Link to="/login">login</Link></li>
+        <li ><Link to="/login">Login</Link></li>
         <li><Link to="/register">About</Link></li>
     </ul>;
 

@@ -30,3 +30,13 @@ a{
     text-decoration: none;
     color: black;
 }
+.categories{
+    cursor:pointer;
+    list-style-type: none;
+}
+.categories:hover{
+    margin-right: 10px;
+    color:white;
+    
+    transition: all .5s ease;
+}
