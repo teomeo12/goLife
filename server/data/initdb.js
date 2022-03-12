@@ -46,18 +46,19 @@ Roughly 297.1 million total visits were recorded in 2021 by the National Park Se
 The NPS said that last years visitation increased by 60 million over 2020. That is when Covid-19 closed facilities in most parks for at least part of the year. Across the entire National Park System, the numbers still remained below pre-pandemic totals.
 However, it was a different story for the best-known sites, which were inundated with visitors. Forty-four places actually set a record for recreation visits in 2021.
 Top 10 most visited sites
-Of 423 sites in the National Park System, the top 25 got more than half of the systems total number of visits.
+<strong>Of 423 sites</strong> in the National Park System, the top 25 got more than half of the systems total number of visits.
 These were the top 10 for 2021, which includes national parks but also parkways, recreation areas, memorials and related sites (figures are rounded off):
-1. Blue Ridge Parkway: 15.9 million
-2. Great Smoky Mountains National Park: 14.1 million
-3. Golden Gate National Recreation Area: 13.7 million
-4. Gateway National Recreation Area: 9.1 million
-5. Lake Mead National Recreation Area: 7.6 million
-6. George Washington Memorial Parkway: 6.8 million
-7. Natchez Trace Parkway: 6.4 million
-8. Lincoln Memorial: 5.8 million
-9. Gulf Islands National Seashore: 5.5 million
-10. Zion National Park: 5 million
+<ul>      1. Blue Ridge Parkway: 15.9 million
+            2. Great Smoky Mountains National Park: 14.1 million
+            3. Golden Gate National Recreation Area: 13.7 million
+            4. Gateway National Recreation Area: 9.1 million
+            5. Lake Mead National Recreation Area: 7.6 million
+            6. George Washington Memorial Parkway: 6.8 million
+            7. Natchez Trace Parkway: 6.4 million
+            8. Lincoln Memorial: 5.8 million
+            9. Gulf Islands National Seashore: 5.5 million
+            10. Zion National Park: 5 million
+</ul>
 The Blue Ridge Parkway, which covers 469 miles in the Appalachians of North Carolina and Virginia, kept its title of the most-visited site in the system.
 Great Smoky Mountains National Park set a visitation record for 2021, passing 14 million recreation visits for the first time, NPS said in its report.
 Top 10 national parks
